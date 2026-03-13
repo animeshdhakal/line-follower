@@ -39,3 +39,4 @@ openocd.log
 # Temporary files
 *.tmp
 *.bak
+.cache
