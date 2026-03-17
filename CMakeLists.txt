@@ -31,7 +31,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 project(${CMAKE_PROJECT_NAME})
 message("Build type: " ${CMAKE_BUILD_TYPE})
 
-# Enable CMake support for ASM, C and C++ languages
+# Enable CMake support for ASM, C, and C++ languages
 enable_language(C CXX ASM)
 
 # Create an executable object type
@@ -48,11 +48,14 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     Core/Src/App.cpp
+    Core/Src/QTR8RC.cpp
+    Core/Src/PID.cpp
+    Core/Src/Motor.cpp
 )
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
-    # Add user defined include paths
+    Core/Inc
 )
 
 # Add project symbols (macros)

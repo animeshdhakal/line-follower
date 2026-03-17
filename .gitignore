@@ -1,42 +1,51 @@
-# Build directories
+# Build and output directories
 build/
-cmake-build-*/
-Debug/
-Release/
+bin/
+obj/
 
-# Build artifacts
-*.o
-*.a
-*.so
+# Binary files
 *.elf
 *.bin
 *.hex
 *.map
 *.lst
-*.srec
 
-# CMake generated files
+# Object and dependency files
+*.o
+*.d
+*.su
+
+# CMake files
 CMakeCache.txt
 CMakeFiles/
+CMakeScripts/
 cmake_install.cmake
-Makefile
+install_manifest.txt
 compile_commands.json
 
-# IDE files
+# IDEs
 .vscode/
-.idea/
+.settings/
+.project
+.cproject
+.mxproject
+# (optional) If you want to keep .vscode settings, use:
+# !.vscode/launch.json
+# !.vscode/tasks.json
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
 *.swp
 *.swo
 *~
-.DS_Store
 
-# OpenOCD logs
-openocd.log
-
-# Debug files
-*.dbg
-
-# Temporary files
-*.tmp
-*.bak
-.cache
+# Others
+.cache/
